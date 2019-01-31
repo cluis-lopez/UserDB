@@ -14,7 +14,7 @@ public class dataBase {
 
 	public dataBase() {
 		super();
-		db = new ArrayList<User>();
+		db = new ArrayList<>();
 	}
 
 	public void addUser(User u) {
@@ -82,7 +82,7 @@ public class dataBase {
 	}
 	
 	public User getUser(int i) {
-		if (i<0)
+		if (i<0 || i >= db.size())
 			return null;
 		return db.get(i);
 	}
